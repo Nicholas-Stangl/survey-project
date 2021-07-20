@@ -9,6 +9,7 @@ const Charts = () => {
             <br/>
             <br/>
             <h1>Refactoring this component</h1>
+            <h1>will put stars component here.</h1>
 
         </div>
     );
