@@ -2,19 +2,19 @@ const mongoose = require("mongoose")
 
 
 const ThingSchema = new mongoose.Schema({
-    howLong:{
-        type: String,
+    waitTime:{
+        type: Number,
         required:[true, "Please select a response"]
         
     },
 
-    whereHear:{
-        type: String,
+    explanation:{
+        type: Number,
         required:[true, "Please select a response"]
     },
 
-    whatBrought:{
-        type: String,
+    workQuality:{
+        type: Number,
         required:[true, "Please select a response"]
     }
 

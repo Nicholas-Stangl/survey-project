@@ -6,9 +6,9 @@ import axios from 'axios';
 const NewSurvey = () => {
 
     const [formInfo, setFormInfo] = useState({
-        howLong:"",
-        whereHear:"",
-        whatBrought:""
+        waitTime:"",
+        explanation:"",
+        workQuality:""
     
     })
 
@@ -44,48 +44,59 @@ const NewSurvey = () => {
 
     return (
         <div>
+            <br/>
+            <br/>
+
+            <p>Please select the level to which you agree with the following statements,</p>
+            <p>with 5 equal to “Strongly Agree”, and 0 equal to “Strongly Disagree”. </p>
             <form className="col-4 mx-auto"  onSubmit={submitHandler}>
                 <br/>
                 <div className="form-group">
-                    <label htmlFor="">How long have you been a patient at our offices?</label>
-                    <p style={{color:"red"}}>{errors.howLong? errors.howLong.message: ""}</p>
-                    <select class="form-control" id="" name="howLong" onChange={changeHandler}>
+                    <label htmlFor="">Time spent in the waiting room was not excessive.</label>
+
+                    <p style={{color:"red"}}>{errors.waitTime? errors.waitTime.message: ""}</p>
+                    <select class="form-control" id="" name="waitTime" onChange={changeHandler}>
                         <option></option>
-                        <option>I'm new to the practice</option>
-                        <option>Less than a year</option>
-                        <option>Over a year, under two</option>
-                        <option>Over two years, under five</option>
-                        <option>Over five years, under ten</option>
-                        <option>Ten years or more</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
                     </select>
                 </div>
 
                 <br/>
                 <div className="form-group">
-                    <label htmlFor="">Where did you learn about our practice?</label>
-                    <p style={{color:"red"}}>{errors.whereHear? errors.whereHear.message: ""}</p>
-                    <select class="form-control" id="" name="whereHear" onChange={changeHandler}>
+                    <label htmlFor="">Elements of my procedure were explained clearly.</label>
+
+                    <p style={{color:"red"}}>{errors.explanation? errors.explanation.message: ""}</p>
+                    <select class="form-control" id="" name="explanation" onChange={changeHandler}>
                         <option></option>
-                        <option>Advertisement</option>
-                        <option>Recommendation</option>
-                        <option>Insurance Provider</option>
-                        <option>Research</option>
-                        <option>Other</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
                     </select>
                 </div>
 
 
                 <br/>
                 <div className="form-group">
-                    <label htmlFor="">What brought you in for your latest visit?</label>
-                    <p style={{color:"red"}}>{errors.whatBrought? errors.whatBrought.message: ""}</p>
-                    <select class="form-control" id="" name="whatBrought" onChange={changeHandler}>
+                    <label htmlFor="">My dental work was completed to my satisfaction.</label>
+
+
+                    <p style={{color:"red"}}>{errors.workQuality? errors.workQuality.message: ""}</p>
+                    <select class="form-control" id="" name="workQuality" onChange={changeHandler}>
                         <option></option>
-                        <option>Annual Cleaning</option>
-                        <option>Dental Work</option>
-                        <option>Emergency Dental Work</option>
-                        <option>Molds for Braces/Mouth Guard</option>
-                        <option>Other</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
                     </select>
                 </div>
                 
