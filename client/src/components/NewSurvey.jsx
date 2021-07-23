@@ -46,10 +46,9 @@ const NewSurvey = () => {
         <div>
             <br/>
             <br/>
-
-            <p>Please select the level to which you agree with the following statements,</p>
-            <p>with 5 equal to “Strongly Agree”, and 0 equal to “Strongly Disagree”. </p>
             <form className="col-4 mx-auto"  onSubmit={submitHandler}>
+                <p>Please select the level to which you agree with the following statements,
+                    with 5 equal to “Strongly Agree”, and 0 equal to “Strongly Disagree”.</p>
                 <br/>
                 <div className="form-group">
                     <label htmlFor="">Time spent in the waiting room was not excessive.</label>
